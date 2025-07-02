@@ -1,0 +1,8 @@
+# Ignore all .log files in entire repo
+*.log
+
+# Ignore .terraform folder in any directory
+**/.terraform/
+.terraform
+# Ignore temp folders anywhere
+**/temp/
