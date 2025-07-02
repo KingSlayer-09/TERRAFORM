@@ -1,5 +1,5 @@
-resource "aws_route_table" "public_rtb" {
-  vpc_id = aws_vpc.demo_vpc.id
+resource "aws_route_table" "public_rtb_01" {
+  vpc_id = aws_vpc.vpc-01.id
 
   route {
     cidr_block = "0.0.0.0/0"
