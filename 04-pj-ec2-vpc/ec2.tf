@@ -30,7 +30,7 @@ resource "aws_instance" "virtual-machine" {
               <html>
               <head><title>Welcome</title></head>
               <body>
-                <marquee>Kya be chotte lulli ke jayega na vandri lake</marquee>
+                <marquee>Server created by Terraform</marquee>
               </body>
               </html>
               EOT
