@@ -1,16 +1,18 @@
 variable "instance_type" {
   description = "Type of instance to launch"
   type        = string
-  default     = "t2.micro"
 
   validation {
-    condition = var.instance_type == "t2.micro" || var.instance_type == "t3.micro"
-    error_message = "Instance type must be either 't2.micro' or 't3.micro'."
+    condition     = contains(["t2.micro", "t2.medium", "t3.large"], var.instance_type)
+    error_message = "Instance doesnt support"
   }
-  
+
 }
 
-variable "volume_size" {
-  description = "Size of the EBS volume in GB"
-  type        = number
+variable "ec2-vol-config" {
+  description = "Configuration for the EBS volume"
+  type = object({
+    size = number
+    type = string
+  })
 }
