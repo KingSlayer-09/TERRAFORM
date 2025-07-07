@@ -34,3 +34,19 @@ validation {
 ### Mergeing variables
 
 tags = merge(local.common_tags, var.additional_tags)
+
+
+### Locals kese use kre
+
+locals {
+  name_prefix = "${var.project}-${var.environment}"
+}
+
+
+#### Output
+
+output "output_name" {
+  value = <expression>
+  description = "optional: describe what this output is"
+  sensitive = true|false  # optional, hide in CLI output
+}
