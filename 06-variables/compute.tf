@@ -6,10 +6,7 @@ resource "aws_instance" "compute-instance" {
     volume_size           = var.ec2-vol-config.size
     volume_type           = var.ec2-vol-config.type
   }
-  tags = {
-    Name      = "ComputeInstance"
-    CreatedBy = "Terraform"
-  }
+  tags = local.tags
 }
 
 
